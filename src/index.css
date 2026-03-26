@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brutal-pink: #FF6B81;
+  --color-brutal-blue: #3B82F6;
+  --color-brutal-yellow: #FFD93D;
+  --color-brutal-black: #000000;
+  
+  --shadow-brutal: 4px 4px 0px 0px #000000;
+  --shadow-brutal-lg: 8px 8px 0px 0px #000000;
+}
+
+@layer base {
+  body {
+    @apply bg-[#FDFDFD] text-brutal-black font-sans;
+  }
+}
+
+@utility brutal-border {
+  border: 2px solid var(--color-brutal-black);
+}
+
+@utility brutal-card {
+  border: 2px solid var(--color-brutal-black);
+  background-color: white;
+  box-shadow: var(--shadow-brutal);
+  border-radius: 0.75rem;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+
+  &:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: var(--shadow-brutal-lg);
+  }
+}
+
+@utility brutal-btn {
+  border: 2px solid var(--color-brutal-black);
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  border-radius: 9999px;
+  font-weight: 700;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+
+  &:active {
+    transform: translate(2px, 2px);
+    box-shadow: none;
+  }
+}
